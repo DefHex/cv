@@ -1,0 +1,78 @@
+.app-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.pdf-viewer {
+  width: 100%;
+  height: 100vh;
+  flex-shrink: 0;
+}
+
+.pdf-viewer object {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+
+.qr-container {
+  padding: 60px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  background-color: var(--bg);
+  border-top: 1px solid var(--border);
+}
+
+.qr-code {
+  max-width: 250px;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 12px;
+  background: white;
+  box-shadow: var(--shadow);
+}
+
+.qr-container p {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--text-h);
+}
+
+.pdf-fallback {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  gap: 20px;
+  background-color: var(--code-bg);
+}
+
+.download-button {
+  padding: 12px 24px;
+  background-color: var(--accent);
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: opacity 0.2s;
+}
+
+.download-button:hover {
+  opacity: 0.8;
+}
+
+/* Override #root width from index.css to allow true fullscreen PDF */
+#root {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+  border-inline: none !important;
+}
