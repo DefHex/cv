@@ -14,9 +14,8 @@ function App() {
         </object>
       </div>
       <div className="qr-container">
-        {/* Replace /qr-code.png with your actual QR code image path */}
         <img
-          src="/qr-code.png"
+          src="CVQR.svg"
           alt="QR Code to view online"
           className="qr-code"
           onError={(e) => {
